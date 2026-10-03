@@ -1,0 +1,64 @@
+{
+  "name": "review-cash-reconciliation-variance-reviewer",
+  "description": "Run Cash Reconciliation Variance Reviewer",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "account_period": {
+            "type": "string",
+            "description": "account period"
+          },
+          "expected_balance": {
+            "type": "number",
+            "description": "expected balance"
+          },
+          "actual_balance": {
+            "type": "number",
+            "description": "actual balance"
+          },
+          "variance_explanation": {
+            "type": "string",
+            "description": "variance explanation"
+          },
+          "reviewer": {
+            "type": "string",
+            "description": "reviewer"
+          }
+        },
+        "required": [
+          "account_period",
+          "expected_balance",
+          "actual_balance",
+          "variance_explanation",
+          "reviewer"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-cash-reconciliation-variance-reviewer.py",
+    "runtime": "python3"
+  }
+}

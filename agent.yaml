@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: cash-reconciliation-variance-reviewer
+version: 0.1.0
+description: Review cash reconciliation variances for amount, explanation, and reviewer evidence.
+skills:
+  - cash-reconciliation-variance-reviewer-skill
+tools:
+  - review-cash-reconciliation-variance-reviewer
+tags:
+  - finance
+  - evidence-driven

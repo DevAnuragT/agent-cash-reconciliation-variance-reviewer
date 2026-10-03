@@ -1,0 +1,34 @@
+{
+  "slug": "cash-reconciliation-variance-reviewer",
+  "title": "Cash Reconciliation Variance Reviewer",
+  "category": "finance",
+  "description": "Review cash reconciliation variances for amount, explanation, and reviewer evidence.",
+  "fields": {
+    "account_period": {
+      "label": "account period",
+      "kind": "required",
+      "minimum": 0
+    },
+    "expected_balance": {
+      "label": "expected balance",
+      "kind": "number",
+      "minimum": 1
+    },
+    "actual_balance": {
+      "label": "actual balance",
+      "kind": "number",
+      "minimum": 1
+    },
+    "variance_explanation": {
+      "label": "variance explanation",
+      "kind": "text",
+      "minimum": 30
+    },
+    "reviewer": {
+      "label": "reviewer",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}
